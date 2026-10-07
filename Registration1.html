@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Page</title>
+<style>
+  body { font-family: Verdana, Arial, sans-serif; font-size: 12px; background: #fff; }
+  #wrap { width: 640px; margin: 10px auto; background: #ebebeb; padding: 10px; }
+  h3 { color: red; font-family: Arial, sans-serif; font-size: 14px; margin: 14px 0 4px; }
+  td.label { text-align: right; font-weight: bold; padding-right: 4px; vertical-align: top; }
+  .req { color: red; }
+  input[type=text], select, textarea { font-size: 11px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+<form action="#" method="post">
+ 
+  <p><span class="req">*</span> - Denotes Required Information</p>
+  <p><b>&gt; 1 Donation</b> &nbsp;&nbsp; &gt; 2 Confirmation &nbsp;&nbsp; &gt; Thank You!</p>
+ 
+  <h3>Donor Information</h3>
+  <table>
+    <tr><td class="label">First Name<span class="req">*</span></td><td><input type="text" name="fname" size="30"></td></tr>
+    <tr><td class="label">Last Name<span class="req">*</span></td><td><input type="text" name="lname" size="30"></td></tr>
+    <tr><td class="label">Company</td><td><input type="text" name="company" size="30"></td></tr>
+    <tr><td class="label">Address 1<span class="req">*</span></td><td><input type="text" name="addr1" size="30"></td></tr>
+    <tr><td class="label">Address 2</td><td><input type="text" name="addr2" size="30"></td></tr>
+    <tr><td class="label">City<span class="req">*</span></td><td><input type="text" name="city" size="30"></td></tr>
+    <tr><td class="label">State<span class="req">*</span></td>
+        <td><select name="state">
+          <option>Select a State</option>
+          <option>West Bengal</option>
+          <option>Delhi</option>
+          <option>Maharashtra</option>
+          <option>Karnataka</option>
+        </select></td></tr>
+    <tr><td class="label">Zip Code<span class="req">*</span></td><td><input type="text" name="zip" size="30"></td></tr>
+    <tr><td class="label">Country<span class="req">*</span></td>
+        <td><select name="country">
+          <option>Select a Country</option>
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select></td></tr>
+    <tr><td class="label">Phone</td><td><input type="text" name="phone" size="30"></td></tr>
+    <tr><td class="label">Fax</td><td><input type="text" name="fax" size="30"></td></tr>
+    <tr><td class="label">Email<span class="req">*</span></td><td><input type="text" name="email" size="30"></td></tr>
+    <tr>
+      <td class="label">Donation Amount<span class="req">*</span><br><small>(Check a button or type in your amount)</small></td>
+      <td>
+        <input type="radio" name="amount" value="none" checked> None
+        <input type="radio" name="amount" value="50"> $50
+        <input type="radio" name="amount" value="75"> $75
+        <input type="radio" name="amount" value="100"> $100
+        <input type="radio" name="amount" value="250"> $250
+        <input type="radio" name="amount" value="other"> Other
+        <br><b>Other Amount $</b> <input type="text" name="otheramount" size="20">
+      </td>
+    </tr>
+    <tr>
+      <td class="label">Recurring Donation<br><small>(Check if yes)</small></td>
+      <td>
+        <input type="checkbox" name="recurring"> I am interested in giving on a regular basis.<br>
+        Monthly Credit Card $ <input type="text" name="monthly" size="4">
+        For <input type="text" name="months" size="4"> Months
+      </td>
+    </tr>
+  </table>
+ 
+  <h3>Honorarium and Memorial Donation Information</h3>
+  <table>
+    <tr>
+      <td class="label">I would like to make this donation</td>
+      <td>
+        <input type="radio" name="honor" value="honor"> To Honor<br>
+        <input type="radio" name="honor" value="memory"> In Memory of
+      </td>
+    </tr>
+    <tr><td class="label">Name</td><td><input type="text" name="hname" size="30"></td></tr>
+    <tr><td class="label">Acknowledge Donation to</td><td><input type="text" name="hack" size="30"></td></tr>
+    <tr><td class="label">Address</td><td><input type="text" name="haddr" size="30"></td></tr>
+    <tr><td class="label">City</td><td><input type="text" name="hcity" size="30"></td></tr>
+    <tr><td class="label">State</td>
+        <td><select name="hstate">
+          <option>Select a State</option>
+          <option>West Bengal</option>
+          <option>Delhi</option>
+          <option>Maharashtra</option>
+          <option>Karnataka</option>
+        </select></td></tr>
+    <tr><td class="label">Zip</td><td><input type="text" name="hzip" size="30"></td></tr>
+  </table>
+ 
+  <h3>Additional Information</h3>
+  <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+  <table>
+    <tr><td class="label">Name</td><td><input type="text" name="pubname" size="30"></td></tr>
+  </table>
+  <p>
+    <input type="checkbox" name="anon"> I would like my gift to remain anonymous.<br>
+    <input type="checkbox" name="match"> My employer offers a matching gift program. I will mail the matching gift form.<br>
+    <input type="checkbox" name="nothanks"> Please save the cost of acknowledging this gift by not mailing a thank you letter.
+  </p>
+ 
+  <table>
+    <tr>
+      <td class="label">Comments<br><small>(Please type any questions or feedback here)</small></td>
+      <td><textarea name="comments" rows="6" cols="45"></textarea></td>
+    </tr>
+    <tr>
+      <td class="label">How may we contact you?</td>
+      <td>
+        <input type="checkbox" name="c_email"> E-mail<br>
+        <input type="checkbox" name="c_postal"> Postal Mail<br>
+        <input type="checkbox" name="c_tel"> Telephone<br>
+        <input type="checkbox" name="c_fax"> Fax
+      </td>
+    </tr>
+  </table>
+ 
+  <p>I would like to receive newsletters and information about special events by:</p>
+  <p>
+    <input type="checkbox" name="n_email"> E-mail<br>
+    <input type="checkbox" name="n_postal"> Postal Mail
+  </p>
+  <p><input type="checkbox" name="volunteer"> I would like information about volunteering with the organization</p>
+ 
+  <p style="text-align:center;">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Continue">
+  </p>
+ 
+  <p>Donate online with confidence. You are on a secure server.</p>
+  <p>If you have any problems or questions, please contact <a href="#">support</a>.</p>
+ 
+</form>
+</div>
+</body>
+</html>
+ S
